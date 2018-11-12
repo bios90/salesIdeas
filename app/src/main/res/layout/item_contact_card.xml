@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.cachapa.expandablelayout.ExpandableLayout
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expContactCard"
+
+    app:el_expanded="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:clipToPadding="false"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="2dp"
+        android:elevation="8dp"
+        android:background="@color/myWhite"
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+        <RelativeLayout
+            android:id="@+id/laMain"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:id="@+id/rightSide"
+
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_toRightOf="@id/leftSide"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvName"
+
+                    android:textColor="@color/myPink"
+                    android:padding="4dp"
+                    android:text="Александр Сергеевич"
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/laPhoneRow"
+
+                        android:layout_weight="50"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/tvPhoneIcon"
+
+                                android:layout_marginLeft="6dp"
+                                android:text="@string/fawPhone"
+                                android:textColor="@color/myBlack"
+                                style="@style/IconXSWhite"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvPhone"
+
+                                android:lines="1"
+                                android:ellipsize="end"
+                                android:layout_toRightOf="@id/tvPhoneIcon"
+                                android:gravity="left"
+                                style="@style/TVsmReg"
+                                android:layout_width="match_parent"
+                                android:layout_height="22dp"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:text="+79167062291"
+                                android:textColor="@color/myBlack" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/laMailRow"
+
+                        android:layout_weight="50"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/tvIconMail"
+
+                                android:layout_marginLeft="6dp"
+                                android:text="@string/fawMail"
+                                android:textColor="@color/myBlack"
+                                style="@style/IconXSWhite"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp" />
+
+                            <TextView
+                                android:id="@+id/tvMail"
+
+                                android:lines="1"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:layout_toRightOf="@+id/tvIconMail"
+                                style="@style/TVsmReg"
+                                android:layout_width="match_parent"
+                                android:layout_height="22dp"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp"
+                                android:text="bios90@mail.ru"
+                                android:textColor="@color/myBlack" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/laBdayRow"
+
+                    android:layout_gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_marginLeft="6dp"
+                            android:text="@string/fawBirthday"
+                            android:textColor="@color/myBlack"
+                            style="@style/IconXSWhite"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp" />
+                        <TextView
+                            android:id="@+id/tvBday"
+
+                            android:paddingRight="22dp"
+                            android:paddingLeft="22dp"
+                            android:textColor="@color/myBlack"
+                            android:text="22 января 1999"
+                            style="@style/TVsmReg"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:weightSum="30"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/rightSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnDelete"
+
+                    android:textColor="@color/sel_pink"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/monsemibold"
+                    android:text="Убрать"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/btn_empty_pink_rounded"
+                    android:layout_weight="10"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp" />
+
+
+                <Button
+                    android:id="@+id/btnEdit"
+
+                    android:textColor="@color/sel_white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/monsemibold"
+                    android:text="Изменить"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/btn_pink_rounded"
+                    android:layout_weight="10"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp" />
+
+
+                <Button
+                    android:id="@+id/btnAdd"
+
+                    android:textColor="@color/sel_white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/monsemibold"
+                    android:text="Добавить"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/btn_green_rounded"
+                    android:layout_weight="10"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+</net.cachapa.expandablelayout.ExpandableLayout>

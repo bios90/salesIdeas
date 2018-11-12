@@ -1,0 +1,230 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPink</item>
+        <item name="colorPrimaryDark">@color/myPink</item>
+        <item name="colorAccent">@color/myPink</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+
+        <item name="android:spinnerItemStyle">
+            @style/spinnerItemStyle
+        </item>
+
+        <item name="android:spinnerDropDownItemStyle">
+            @style/spinnerDropDownItemStyle
+        </item>
+    </style>
+
+    <style name="DatePickerSpinner">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColorPrimary">@color/myPink</item>
+        <item name="android:colorControlNormal">@color/myPink</item>
+    </style>
+
+    <style name="spinnerItemStyle">
+        <item name="android:fontFamily">@font/monsemibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/myBlack</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:fontFamily">@font/monsemibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/myBlack</item>
+    </style>
+
+    <style name="TVxsReg">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monmedium</item>
+    </style>
+
+    <style name="TVsmReg">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monmedium</item>
+    </style>
+
+    <style name="TVmdReg">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monmedium</item>
+    </style>
+
+    <style name="TVlgReg">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monmedium</item>
+    </style>
+
+    <style name="TVxlReg">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monmedium</item>
+    </style>
+
+
+    <style name="TVxsBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monextrabold</item>
+    </style>
+
+    <style name="TVsmBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monextrabold</item>
+    </style>
+
+    <style name="TVmdBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monextrabold</item>
+    </style>
+
+    <style name="TVlgBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monextrabold</item>
+    </style>
+
+    <style name="TVxlBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monextrabold</item>
+    </style>
+
+
+    <style name="TVxsSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+
+    <style name="TVsmSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+
+    <style name="TVmdSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+
+    <style name="TVlgSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+
+    <style name="TVxlSemiBold">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:text">Ок</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+
+    <style name="IconXSWhite">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/fawsolid</item>
+    </style>
+
+    <style name="IconSWhite">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/fawsolid</item>
+    </style>
+
+    <style name="IconMWhite">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/fawsolid</item>
+    </style>
+
+    <style name="IconLWhite">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/fawsolid</item>
+    </style>
+
+
+    <style name="IconXLWhite">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">@color/sel_white</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:fontFamily">@font/fawsolid</item>
+    </style>
+
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="android:background">#00ffffff</item>-->
+    </style>
+
+
+
+    <style name="Custom" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@style/dialogText</item>
+        <item name="DialogSpotColor">@color/myLightGray</item>
+        <item name="android:background">@color/myBlack</item>
+        <item name="DialogSpotCount">5</item>
+    </style>
+
+    <style name="dialogText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/myLightGray</item>
+        <item name="android:fontFamily">@font/monsemibold</item>
+    </style>
+</resources>

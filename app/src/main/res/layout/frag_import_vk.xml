@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/laAddAllVk"
+
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/laRegister"
+        android:clipToPadding="false"
+        android:background="@drawable/btn_green"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/iconEnter"
+                android:layout_marginRight="6dp"
+                android:textColor="@android:color/white"
+                android:text="@string/fawUsers"
+                style="@style/IconMWhite"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+
+            <TextView
+                android:layout_toRightOf="@+id/iconEnter"
+                android:gravity="center"
+                android:text="Добавить всех"
+                style="@style/TVsmSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollAllUser"
+
+        android:background="@color/myLightGray"
+        android:layout_below="@id/laAddAllVk"
+        android:layout_above="@id/btnImportVk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/laForAllClients"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnImportVk"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/monsemibold"
+        android:textAllCaps="false"
+        android:textColor="@color/sel_white"
+        android:background="@drawable/btn_pink"
+        android:text="Загрузить друзей Вконтакте"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+</RelativeLayout>

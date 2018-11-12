@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recExport"
+
+        android:padding="4dp"
+        android:clipToPadding="false"
+        android:layout_above="@id/btnImportVk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    <Button
+        android:id="@+id/btnNewExport"
+
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/monsemibold"
+        android:textAllCaps="false"
+        android:textColor="@color/sel_white"
+        android:background="@drawable/btn_pink"
+        android:text="Новый экспорт"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+</RelativeLayout>

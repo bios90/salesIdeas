@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/myExtraLightGray"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:scrollbarThumbVertical="@drawable/scroll_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/myExtraLightGray"
+            android:clipToPadding="false"
+            android:elevation="8dp"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="8dp">
+
+
+                <LinearLayout
+                    android:id="@+id/laTitle"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pacif"
+                        android:text="Добавить"
+                        android:textColor="@color/myBlack"
+                        android:textSize="28dp" />
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pacif"
+                        android:text=" нового"
+                        android:textColor="@color/myPink"
+                        android:textSize="28dp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Имя:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etName"
+
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:fontFamily="@font/monmedium"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Ник Instagram:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etNick"
+
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:fontFamily="@font/monmedium"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="ID Вконтакте:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etVkId"
+
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:fontFamily="@font/monmedium"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_weight="50"
+                    android:gravity="left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+
+                    android:text="Город :"
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_weight="50"
+                    android:gravity="left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Район :"
+                    android:textColor="@color/myGray" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etCity"
+
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/et_gray"
+                    android:fontFamily="@font/monmedium"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" />
+
+                <EditText
+                    android:id="@+id/etDistrict"
+
+                    android:layout_weight="50"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/et_gray"
+                    android:fontFamily="@font/monmedium"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" />
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Пол:"
+                android:textColor="@color/myGray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/et_gray_border"
+                    android:dropDownWidth="match_parent"
+                    android:popupBackground="@drawable/et_gray_border"></Spinner>
+
+
+                <TextView
+                    style="@style/IconSWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:elevation="2dp"
+                    android:text="@string/fawArrowDown"
+                    android:textColor="@color/myPink" />
+
+            </RelativeLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Дата рождения:"
+                        android:textColor="@color/myGray" />
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvDate"
+
+                            android:paddingLeft="6dp"
+                            android:paddingRight="38dp"
+                            android:gravity="center"
+                            style="@style/TVsmReg"
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="8dp"
+
+                            android:background="@drawable/et_gray_border"
+                            android:text="Нажмите для ввода"
+                            android:textColor="@color/myGray" />
+
+
+                            <TextView
+                                android:text="@string/fawDate"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/pink_right_corners_stroke"
+                                style="@style/IconMWhite"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Возраст:"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        android:id="@+id/tvAge"
+
+                        style="@style/TVsmReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/et_gray"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text=""
+                        android:textColor="@color/myGray" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Категория:"
+                android:textColor="@color/myGray" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <Spinner
+                    android:id="@+id/spinnerClientType"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/et_gray_border"
+                    android:dropDownWidth="match_parent"
+                    android:popupBackground="@drawable/et_gray_border"></Spinner>
+
+
+                <TextView
+                    style="@style/IconSWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:elevation="2dp"
+                    android:text="@string/fawArrowDown"
+                    android:textColor="@color/myPink" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Номер телефона:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etPhone"
+
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:fontFamily="@font/monmedium"
+                android:inputType="phone"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Email:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etEmail"
+
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:fontFamily="@font/monmedium"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Дата первого контакта:"
+                android:textColor="@color/myGray" />
+
+
+            <RelativeLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvFirstVisit"
+
+                    android:paddingLeft="6dp"
+                    android:paddingRight="38dp"
+                    android:gravity="center"
+                    style="@style/TVmdReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+
+                    android:background="@drawable/et_gray_border"
+                    android:text="Нажмите для ввода"
+                    android:textColor="@color/myGray" />
+
+
+                <TextView
+                    android:text="@string/fawDate"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/pink_right_corners_stroke"
+                    style="@style/IconMWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+            </RelativeLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/tvFirstVisit"-->
+
+                <!--style="@style/TVmdReg"-->
+                <!--android:gravity="left|center_vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="32dp"-->
+                <!---->
+                <!--android:background="@drawable/et_gray_border"-->
+                <!--android:paddingLeft="6dp"-->
+                <!--android:paddingRight="38dp"-->
+                <!--android:text=""-->
+                <!--android:textColor="@color/myGray" />-->
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Дата последнего контакта:"
+                android:textColor="@color/myGray" />
+
+            <RelativeLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvLastVisit"
+
+                    android:paddingLeft="6dp"
+                    android:paddingRight="38dp"
+                    android:gravity="center"
+                    style="@style/TVmdReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+
+                    android:background="@drawable/et_gray_border"
+                    android:text="Нажмите для ввода"
+                    android:textColor="@color/myGray" />
+
+
+                <TextView
+                    android:text="@string/fawDate"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/pink_right_corners_stroke"
+                    style="@style/IconMWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:background="@color/myBlack"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/laOpenInterests"
+                    android:clipToPadding="false"
+                    android:elevation="4dp"
+                    android:background="@drawable/btn_blue"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp">
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/tvAllInterests"
+                        android:gravity="center"
+                        android:text="Интересы:"
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp" />
+
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/fawArrowDown"
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp" />
+
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expInterests"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.GridLayout
+                        android:clipToPadding="false"
+                        android:clipChildren="false"
+                        android:id="@+id/gridInterests"
+                        app:columnCount="2"
+                        grid:rowCount="10"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:paddingRight="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.GridLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:background="@color/myBlack"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/laOpenProducts"
+                    android:clipToPadding="false"
+                    android:elevation="4dp"
+                    android:background="@drawable/btn_blue"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp">
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/tvAllProducts"
+                        android:gravity="center"
+                        android:text="Приобретенные товары:"
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp" />
+
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/iconEnter"
+                        android:layout_marginRight="6dp"
+                        android:textColor="@android:color/white"
+                        android:text="@string/fawArrowDown"
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp" />
+
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expProducts"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.GridLayout
+                        android:clipToPadding="false"
+                        android:clipChildren="false"
+                        android:id="@+id/gridProducts"
+                        app:columnCount="2"
+                        grid:rowCount="10"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:paddingRight="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingBottom="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.GridLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Размер скидки:"
+                android:textColor="@color/myGray" />
+
+
+            <com.ramotion.fluidslider.FluidSlider
+                android:id="@+id/sale_Slider"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:bar_color="@color/myBlack"
+                app:bubble_text_color="@color/myGray"
+                app:size="small"
+                app:text_size="14dp" />
+
+
+            <TextView
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:text="Комментарий:"
+                android:textColor="@color/myGray" />
+
+            <EditText
+                android:id="@+id/etComment"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/et_gray"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:padding="8dp"
+                android:scrollbars="vertical" />
+
+
+            <LinearLayout
+                android:id="@+id/laOkCancel"
+
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCancel"
+
+                    android:textSize="14sp"
+                    android:fontFamily="@font/monsemibold"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="4dp"
+                    android:textColor="@color/sel_pink"
+                    android:text="Отмена"
+                    android:background="@drawable/btn_empty_pink"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp" />
+
+                <Button
+                    android:id="@+id/btnOk"
+
+                    android:textSize="14sp"
+                    android:fontFamily="@font/monsemibold"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/sel_white"
+                    android:text="Изменить"
+                    android:background="@drawable/btn_pink"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/laBtnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_pink"
+                android:clipToPadding="false">
+
+                <RelativeLayout
+                    android:id="@+id/laBtnAddClient"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/iconCross"
+                        style="@style/IconMWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="6dp"
+                        android:text="@string/fawAddCross"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        style="@style/TVsmSemiBold"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_toRightOf="@+id/iconCross"
+                        android:text="Добавить"
+                        android:textAllCaps="true" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

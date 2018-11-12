@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:gravity="center"
+    android:padding="12dp"
+    android:background="@color/myBlackTrans"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act_export_dialog">
+
+    <RelativeLayout
+        android:clipToPadding="false"
+        android:background="@drawable/rounded_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Экспорт в Excel"
+            android:background="@drawable/rounded_top_black"
+            style="@style/TVmdSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recExportNamesList"
+
+            android:clipToPadding="false"
+            android:footerDividersEnabled="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+
+            android:layout_above="@+id/laBottomView"
+            android:layout_below="@id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <LinearLayout
+            android:id="@+id/laBottomView"
+
+
+
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:background="@color/myBlackLight"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <View
+                android:background="@color/myWhite"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:weightSum="36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/tvCount"
+
+                    android:textColor="@color/myBlackLight"
+                    android:text="Выбрано : 0"
+                    android:layout_weight="18"
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp" />
+
+
+
+                <Button
+                    android:id="@+id/btnSelectAll"
+
+                    android:textSize="12dp"
+                    android:fontFamily="@font/monsemibold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/sel_white"
+                    android:text="Отметить всех"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/btn_pink_rounded"
+                    android:layout_weight="18"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnExport"
+
+                android:textSize="14dp"
+                android:fontFamily="@font/monsemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/sel_white"
+                android:text="Экспорт"
+                android:layout_margin="6dp"
+                android:background="@drawable/btn_green_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="32dp" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="6dp"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textSize="12dp"
+                android:fontFamily="@font/monsemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/sel_pink"
+                android:text="Отметить всех"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/btn_empty_pink_rounded"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+
+            <Button
+                android:textSize="12dp"
+                android:fontFamily="@font/monsemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/sel_white"
+                android:text="Экспорт"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/btn_green_rounded"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="32dp" />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

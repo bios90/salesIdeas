@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/frameImport"
+
+        android:layout_above="@+id/laBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+    <LinearLayout
+        android:background="@color/myWhite"
+        android:id="@+id/laBottomNav"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/laImportContacts"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="@string/fawPhoneContacts"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Контакты"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laImportVk"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:fontFamily="@font/fawbrands"
+                android:textColor="@color/myGray"
+                android:text="@string/fawVK"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Вконтакте"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laImportExcel"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="@string/fawExcel"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Файл Excel"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

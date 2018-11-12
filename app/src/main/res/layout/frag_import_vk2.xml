@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expBtnAddAll"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingTop="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/laFinish"
+
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="20"
+                    android:clipToPadding="false"
+                    android:background="@drawable/btn_empty_pink_rounded"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp">
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp">
+
+                        <TextView
+                            android:id="@+id/iconFinish"
+                            android:layout_marginRight="6dp"
+                            android:textColor="@color/myPink"
+                            android:text="@string/fawArrowLeft"
+                            style="@style/IconMWhite"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:textColor="@color/myPink"
+                            android:layout_toRightOf="@+id/iconFinish"
+                            android:gravity="center"
+                            android:text="Завершить"
+                            style="@style/TVxsSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/laAddAllVk"
+
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="20"
+                    android:clipToPadding="false"
+                    android:background="@drawable/btn_green_rounded"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp">
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp">
+
+                        <TextView
+                            android:id="@+id/iconEnter"
+                            android:layout_marginRight="6dp"
+                            android:textColor="@android:color/white"
+                            android:text="@string/fawUsers"
+                            style="@style/IconMWhite"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp" />
+
+                        <TextView
+                            android:layout_toRightOf="@+id/iconEnter"
+                            android:gravity="center"
+                            android:text="Добавить всех"
+                            style="@style/TVxsSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/laSearch"
+
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp">
+
+                <EditText
+                    android:id="@+id/etSearch"
+
+                    android:paddingRight="98dp"
+                    android:paddingLeft="6dp"
+                    android:background="@drawable/et_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:text="@string/fawSearch"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_only_right_corners"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recVkUsers"
+
+        android:paddingTop="2dp"
+        android:background="@color/myLightGray"
+        android:layout_above="@+id/btnImportVk"
+        android:layout_below="@id/expBtnAddAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnImportVk"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/monsemibold"
+        android:textAllCaps="false"
+        android:textColor="@color/sel_white"
+        android:background="@drawable/btn_pink"
+        android:text="Показать друзей Вконтакте"
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+</RelativeLayout>

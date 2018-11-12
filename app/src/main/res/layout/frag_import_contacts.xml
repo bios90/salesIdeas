@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/laAddAllContacts"
+
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/laRegister"
+        android:clipToPadding="false"
+        android:background="@drawable/btn_green"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp">
+
+            <TextView
+                android:id="@+id/iconEnter"
+                android:layout_marginRight="6dp"
+                android:textColor="@android:color/white"
+                android:text="@string/fawUsers"
+                style="@style/IconMWhite"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+
+            <TextView
+                android:layout_toRightOf="@+id/iconEnter"
+                android:gravity="center"
+                android:text="Добавить всех"
+                style="@style/TVsmSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/laSearch"
+
+        android:layout_below="@id/laAddAllContacts"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+
+        <EditText
+            android:id="@+id/etSearch"
+
+            android:paddingRight="98dp"
+            android:paddingLeft="6dp"
+            android:background="@drawable/et_gray"
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+        <TextView
+            style="@style/IconMWhite"
+            android:text="@string/fawSearch"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_only_right_corners"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+    </RelativeLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recAllContacts"
+
+        android:background="@color/myLightGray"
+        android:layout_below="@id/laSearch"
+        android:layout_above="@id/btnImportVk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

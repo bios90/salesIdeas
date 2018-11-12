@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/myExtraLightGray"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+
+        android:layout_marginTop="26dp"
+        android:layout_gravity="center_horizontal"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_user_male"
+        app:civ_border_width="0dp"
+        app:civ_border_color="@color/myBlack"
+        android:elevation="6dp"/>
+
+    <TextView
+        android:id="@+id/tvAdminName"
+
+        android:textColor="@color/myBlack"
+        android:layout_marginTop="4dp"
+        android:text="Александр Пушкин"
+        style="@style/TVsmSemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvAdminEmail"
+
+        android:textColor="@color/myBlack"
+        android:text="pushkin@mail.ru"
+        style="@style/TVsmReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@color/myBlack"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <!--<TextView-->
+        <!---->
+        <!--android:textColor="@color/myBlack"-->
+        <!--android:text="Мои аккаунты"-->
+        <!--style="@style/TVmdSemiBold"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <RelativeLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:background="@drawable/round_pink"
+            android:fontFamily="@font/fawbrands"
+            style="@style/IconMWhite"
+            android:layout_width="36dp"
+            android:layout_height="28dp"
+            android:text="@string/fawVK"
+            android:textColor="@color/myWhite" />
+
+        <Button
+            android:id="@+id/btnVkAdd"
+
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/monsemibold"
+            android:textAllCaps="false"
+            android:textColor="@color/sel_white"
+            android:background="@drawable/btn_pink_rounded"
+            android:text="Добавить"
+            android:layout_width="180dp"
+            android:layout_height="32dp" />
+
+
+
+        <TextView
+            android:id="@+id/tvVkName"
+
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            style="@style/TVsmSemiBold"
+            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:text="Филлипп Бесядов"
+            android:textColor="@color/myBlack" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

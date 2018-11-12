@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="myWhite">#ffffff</color>
+    <color name="myWhiteDark">#e0e0e0</color>
+    <color name="myPink">#ff3d57</color>
+    <color name="myPinkDark">#bf3a4c</color>
+    <!--<color name="myBlack">#373737</color>-->
+    <!--<color name="myBlue">#34a8c4</color>-->
+    <!--<color name="myBlueDarkBtn">#2893AD</color>-->
+    <color name="myBlack">#202020</color>
+    <color name="myBlackLight">#484848</color>
+    <color name="myGray">#505050</color>
+    <color name="myLightGray">#D3D3D3</color>
+    <color name="myDarkBlue">#243B55</color>
+    <color name="myExtraLightGray">#F5F5F5</color>
+    <color name="myBlackTrans">#4d000000</color>
+    <color name="myGreen">#28a745</color>
+    <color name="myGreenDark">#1C9938</color>
+    <color name="myYellow">#ffc107</color>
+    <color name="myYellowDark">#E3AB05</color>
+
+</resources>

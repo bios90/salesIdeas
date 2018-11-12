@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="6dp"
+    android:clipToPadding="false"
+    android:background="@drawable/item_online"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="38dp"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    grid:layout_columnWeight="1"
+    grid:layout_rowWeight="1">
+
+
+
+    <ToggleButton
+        android:id="@+id/togg"
+
+        android:clickable="false"
+        android:textOff="@null"
+        android:textOn="@null"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/cheb_pink"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+
+    <TextView
+        android:id="@+id/tvText"
+
+        android:layout_toLeftOf="@id/togg"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/myGray"
+        android:text="jnjdsngdfgdfg"
+        style="@style/TVsmReg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+/>
+
+
+</RelativeLayout>

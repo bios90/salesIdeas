@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:elevation="4dp"
+    android:background="@color/myWhite"
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/leftSide"
+
+            android:background="@color/myWhite"
+            android:orientation="vertical"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar"
+
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center_horizontal"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pushkin"
+                app:civ_border_width="0dp"
+                app:civ_border_color="@color/myBlack" />
+
+            <TextView
+                android:id="@+id/tvName"
+
+                android:textColor="@color/myPink"
+                android:padding="4dp"
+                android:text="Александр Сергеевич"
+                style="@style/TVsmSemiBold"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rightSide"
+
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_toRightOf="@id/leftSide"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/laPhoneRow"
+
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/fawPhone"
+                        android:textColor="@color/myBlack"
+                        style="@style/IconXSWhite"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:id="@+id/tvPhone"
+
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/myBlack"
+                        android:text="+79167062291"
+                        style="@style/TVsmReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laEmailRow"
+
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/fawMail"
+                        android:textColor="@color/myBlack"
+                        style="@style/IconXSWhite"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:id="@+id/tvEmail"
+
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/myBlack"
+                        android:text="bios90@mail.ru"
+                        style="@style/TVsmReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/laBirthdayRow"
+
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/fawBirthday"
+                        android:textColor="@color/myBlack"
+                        style="@style/IconXSWhite"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:id="@+id/tvBirthday"
+
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/myBlack"
+                        android:text="22 января 1999"
+                        style="@style/TVsmReg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_marginBottom="4dp"
+    android:background="@color/myWhite"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/laTitle"
+
+            android:background="@drawable/rounded_top_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+
+                android:text="Фильтр 1"
+                style="@style/TVsmBold"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/iconEnter"
+                android:layout_marginRight="6dp"
+                android:textColor="@android:color/white"
+                android:text="@string/fawArrowDown"
+                style="@style/IconSWhite"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+
+        </RelativeLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expFilterInfo"
+
+            app:el_expanded="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/laCategRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Категории "
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawCategory"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvCateg"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="Новый/Постоянный"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laAgeRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Возраст"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawAge"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvAge"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="от 20 до 25"
+                        android:textColor="@color/myGray" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laGenderRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Пол"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawGender"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvGender"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="-"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laCityRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Город"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawCity"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="-"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laDistrictRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Район"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawDistrict"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvDistrict"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="-"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laMailRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Email"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawMail"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvMail"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="Указан"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laPhoneRow"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="6dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="32"
+                        android:text="Телефон"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/IconMWhite"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:text="@string/fawPhone"
+                        android:textColor="@color/myPink" />
+
+                    <TextView
+                        android:id="@+id/tvPhone"
+
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="0dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="68"
+                        android:text="Неважно"
+                        android:textColor="@color/myBlack" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laProducts"
+
+                    android:layout_margin="4dp"
+                    android:background="@drawable/black_rounded_stroke"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:text="Продукты"
+                        android:textColor="@color/myGray" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexProducts"
+
+                        android:layout_marginTop="6dp"
+                        android:paddingBottom="2dp"
+                        app:flexWrap="wrap"
+                        app:alignItems="stretch"
+                        app:alignContent="stretch"
+                        app:flexDirection="row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/laInterests"
+
+                    android:layout_margin="4dp"
+                    android:background="@drawable/black_rounded_stroke"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:text="Интересы"
+                        android:textColor="@color/myGray" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexInterests"
+
+                        android:layout_marginTop="6dp"
+                        android:paddingBottom="2dp"
+                        app:flexWrap="wrap"
+                        app:alignItems="stretch"
+                        app:alignContent="stretch"
+                        app:flexDirection="row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/laOkCancel"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_empty_pink_rounded"
+                android:fontFamily="@font/monsemibold"
+                android:text="Редактировать"
+                android:textAllCaps="false"
+                android:textColor="@color/sel_pink"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnOk"
+
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_pink_rounded"
+                android:fontFamily="@font/monsemibold"
+                android:text="Применить"
+                android:textAllCaps="false"
+                android:textColor="@color/sel_white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

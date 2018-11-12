@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    android:gravity="center"
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rounded_gray">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:background="@drawable/rounded_top_black"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="Новый Фильтр"
+            style="@style/TVmdSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_below="@id/tvTitle"
+            android:id="@+id/scrollNewFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbarThumbVertical="@drawable/scroll_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Название фильтра :"
+                    android:textColor="@color/myGray" />
+
+                <EditText
+                    android:id="@+id/etName"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/et_gray"
+                    android:fontFamily="@font/monmedium"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" />
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Категория :"
+                    android:textColor="@color/myGray" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+
+                    <TextView
+                        android:id="@+id/tvCateg"
+
+                        style="@style/TVsmReg"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/et_gray_border"
+                        android:text="Новый/Постоянный/Vip"
+                        android:textColor="@color/myGray" />
+
+
+                    <TextView
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:elevation="2dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@color/myPink" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Пол :"
+                    android:textColor="@color/myGray" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerGender"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/et_gray_border"
+                        android:dropDownWidth="match_parent"
+                        android:popupBackground="@drawable/et_gray_border"></Spinner>
+
+
+                    <TextView
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:elevation="2dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@color/myPink" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="50"
+                        android:gravity="left"
+
+                        android:text="Город :"
+                        android:textColor="@color/myGray" />
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="50"
+                        android:gravity="left"
+                        android:text="Район :"
+                        android:textColor="@color/myGray" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/etCity"
+
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <EditText
+                        android:id="@+id/etDistrict"
+
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="50"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="left"
+                        android:text="Возраст :"
+                        android:textColor="@color/myGray" />
+
+                    <EditText
+                        android:id="@+id/etAgeOt"
+
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="32"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/myGray"
+                        android:textSize="22dp" />
+
+
+                    <EditText
+                        android:id="@+id/etAgeDo"
+
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="32"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:gravity="left"
+                        android:text="Скидка :"
+                        android:textColor="@color/myGray" />
+
+                    <EditText
+                        android:id="@+id/etSaleOt"
+
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="32"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        style="@style/TVsmReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/myGray"
+                        android:textSize="22dp" />
+
+
+                    <EditText
+                        android:id="@+id/etSaleDo"
+
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="32"
+                        android:background="@drawable/et_gray"
+                        android:fontFamily="@font/monmedium"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Телефон :"
+                    android:textColor="@color/myGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerPhone"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/et_gray_border"
+                        android:dropDownWidth="match_parent"
+                        android:popupBackground="@drawable/et_gray_border"></Spinner>
+
+
+                    <TextView
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:elevation="2dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@color/myPink" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Email :"
+                    android:textColor="@color/myGray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerEmail"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/et_gray_border"
+                        android:dropDownWidth="match_parent"
+                        android:popupBackground="@drawable/et_gray_border"></Spinner>
+
+
+                    <TextView
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:elevation="2dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@color/myPink" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/myBlack"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/laOpenInterests"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@drawable/btn_blue"
+
+                        android:clipToPadding="false"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/tvAllInterests"
+                            style="@style/TVsmSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Интересы:" />
+
+
+                        <TextView
+                            style="@style/IconSWhite"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="6dp"
+                            android:text="@string/fawArrowDown"
+                            android:textColor="@android:color/white" />
+
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expInterests"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.GridLayout xmlns:grid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/gridInterests"
+                            app:columnCount="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            grid:rowCount="10"></android.support.v7.widget.GridLayout>
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/myBlack"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/laOpenProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@drawable/btn_blue"
+
+                        android:clipToPadding="false"
+                        android:elevation="4dp">
+
+                        <TextView
+                            android:id="@+id/tvAllProducts"
+                            style="@style/TVsmSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Приобретенные товары:" />
+
+
+                        <TextView
+                            android:id="@+id/iconEnter"
+                            style="@style/IconSWhite"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="6dp"
+                            android:text="@string/fawArrowDown"
+                            android:textColor="@android:color/white" />
+
+
+                    </RelativeLayout>
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/expProducts"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.GridLayout xmlns:grid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/gridProducts"
+
+                            app:columnCount="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            grid:rowCount="10"></android.support.v7.widget.GridLayout>
+
+                    </net.cachapa.expandablelayout.ExpandableLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/laOkCancel"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancel"
+
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_empty_pink_rounded"
+                        android:fontFamily="@font/monsemibold"
+                        android:text="Отмена"
+                        android:textAllCaps="false"
+                        android:textColor="@color/sel_pink"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnOk"
+
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_pink_rounded"
+                        android:fontFamily="@font/monsemibold"
+                        android:text="Создать"
+                        android:textAllCaps="false"
+                        android:textColor="@color/sel_white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

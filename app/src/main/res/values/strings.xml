@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">salesIdeas</string>
+    <string name="fawSignIn">&#xf2f6;</string>
+    <string name="fawRegister">&#xf2bd;</string>
+    <string name="fawHamburger">&#xf0c9;</string>
+    <string name="fawAllContacts">&#xf2c2;</string>
+    <string name="fawAddContact">&#xf055;</string>
+    <string name="fawImportContact">&#xf358;</string>
+    <string name="fawUsers">&#xf0c0;</string>
+    <string name="fawAnalitics">&#xf1fe;</string>
+    <string name="fawExport">&#xf093;</string>
+    <string name="fawMailing">&#xf2b6;</string>
+    <string name="fawArrowDown">&#xf078;</string>
+    <string name="fawAddCross">&#xf067;</string>
+    <string name="fawProducts">&#xf61f;</string>
+    <string name="fawInterests">&#xf44b;</string>
+    <string name="fawQuestion">&#xf059;</string>
+    <string name="fawEdit">&#xf303;</string>
+    <string name="fawDelete">&#xf1f8;</string>
+    <string name="fawSearch">&#xf002;</string>
+    <string name="fawPhone">&#xf095;</string>
+    <string name="fawMail">&#xf0e0;</string>
+    <string name="fawBirthday">&#xf1fd;</string>
+    <string name="fawDate">&#xf073;</string>
+    <string name="fawAge">&#xf4fd;</string>
+    <string name="fawCategory">&#xf5fd;</string>
+    <string name="fawFirstVisit">&#xf2b5;</string>
+    <string name="fawLastVisit">&#xf017;</string>
+    <string name="fawSale">&#xf541;</string>
+    <string name="fawVK">&#xf189;</string>
+    <string name="fawInstagram">&#xf16d;</string>
+    <string name="fawCity">&#xf59f;</string>
+    <string name="fawDistrict">&#xf64f;</string>
+    <string name="fawImport">&#xf65e;</string>
+    <string name="fawGroup">&#xf65e;</string>
+    <string name="fawPhoneContacts">&#xf2b9;</string>
+    <string name="fawDate2">&#xf017;</string>
+    <string name="fawShare">&#xf1e0;</string>
+    <string name="fawExcel">&#xf1c3;</string>
+    <string name="fawArrowLeft">&#xf053;</string>
+    <string name="fawGender">&#xf228;</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <integer name="com_vk_sdk_AppId">6733594</integer>
+
+    <string-array name="Gender">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+
+    <string-array name="ClientCategory">
+        <item>Новый</item>
+        <item>Постоянный</item>
+        <item>Vip</item>
+    </string-array>
+</resources>

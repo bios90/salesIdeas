@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/marble4"
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act_first">
+
+    <RelativeLayout
+        android:elevation="8dp"
+        android:clipToPadding="false"
+        android:background="@color/myWhite"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:id="@+id/laTitle"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textSize="42dp"
+                android:textColor="@color/myBlack"
+                android:text="Мои"
+                android:fontFamily="@font/pfitalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+
+
+                android:textSize="42dp"
+                android:textColor="@color/myPink"
+                android:text="Клиенты"
+                android:fontFamily="@font/pfitalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/myBlack"
+            style="@style/TVxsReg"
+            android:gravity="center"
+            android:layout_below="@id/laTitle"
+            android:text="Ваш помощник в работе с клиентами."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/laEnter"
+
+            android:layout_marginBottom="12dp"
+            android:layout_above="@id/laRegister"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:background="@drawable/btn_pink"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:id="@+id/iconEnter"
+                    android:layout_marginRight="6dp"
+                    android:textColor="@android:color/white"
+                    android:text="@string/fawSignIn"
+                    style="@style/IconMWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/iconEnter"
+                    android:gravity="center"
+                    android:text="Войти"
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/laRegister"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:background="@drawable/btn_empty_pink"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/iconReg"
+                    android:layout_marginRight="6dp"
+                    android:textColor="@color/sel_pink"
+                    android:text="@string/fawRegister"
+                    style="@style/IconMWhite"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp" />
+
+                <TextView
+                    android:layout_toRightOf="@+id/iconReg"
+                    android:textColor="@color/sel_pink"
+                    android:text="Регистрация"
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

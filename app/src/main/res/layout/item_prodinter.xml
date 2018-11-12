@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingLeft="6dp"
+    android:paddingRight="6dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvText"
+
+        android:textColor="@color/myGray"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:maxWidth="160dp"
+        android:lines="1"
+        android:ellipsize="end"
+        style="@style/TVsmReg"
+        android:background="@drawable/et_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+</RelativeLayout>

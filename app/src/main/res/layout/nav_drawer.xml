@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/myBlack"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/header"
+        android:layout_width="match_parent"
+        android:layout_height="146dp">
+
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:layout_marginTop="26dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:elevation="12dp"-->
+            <!--android:id="@+id/view2"-->
+            <!--app:cardCornerRadius="30dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:innerRadius="0dp"-->
+            <!--android:shape="ring"-->
+            <!--android:thicknessRatio="1.9">-->
+            <!--<ImageView-->
+                <!--android:scaleType="center"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:id="@+id/imageView1"-->
+                <!--android:src="@mipmap/ic_launcher">-->
+            <!--</ImageView>-->
+        <!--</android.support.v7.widget.CardView>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="26dp"
+            android:layout_gravity="center_horizontal"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_male"
+            app:civ_border_width="0dp"
+            app:civ_border_color="@color/myBlack"
+            android:elevation="6dp"/>
+
+
+        <TextView
+            android:id="@+id/tvAdminName"
+
+            android:layout_marginTop="4dp"
+            android:text="Александр Пушкин"
+            style="@style/TVsmSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvAdminEmail"
+
+            android:text="pushkin@mail.ru"
+            style="@style/TVsmReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/laMyProfile"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawRegister"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Мой профиль"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laClients"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawUsers"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Клиенты"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laImport"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawImport"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Импорт "
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laAnalitics"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawAnalitics"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Аналитика"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laMailing"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawMailing"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Рассылка"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/laExport"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/fawExport"
+                style="@style/IconXLWhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/myLightGray"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+
+
+            <TextView
+                android:textColor="@color/myLightGray"
+                android:text="Экспорт"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                style="@style/TVsmReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

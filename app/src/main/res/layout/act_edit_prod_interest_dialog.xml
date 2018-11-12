@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:padding="12dp"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act_edit_prod_dialog">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+
+            android:background="@drawable/rounded_top_black"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Изменить продукт"
+            style="@style/TVmdSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etText"
+
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/et_gray"
+            android:fontFamily="@font/monmedium"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+        <LinearLayout
+            android:id="@+id/laOkCancel"
+
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCancel"
+
+                android:textSize="14sp"
+                android:fontFamily="@font/monsemibold"
+                android:textAllCaps="false"
+                android:layout_marginRight="4dp"
+                android:textColor="@color/sel_pink"
+                android:text="Отмена"
+                android:background="@drawable/btn_empty_pink_rounded"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="36dp" />
+
+            <Button
+                android:id="@+id/btnOk"
+
+                android:textSize="14sp"
+                android:fontFamily="@font/monsemibold"
+                android:textAllCaps="false"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/sel_white"
+                android:text="Изменить"
+                android:background="@drawable/btn_pink_rounded"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

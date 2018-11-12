@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/frameMyProfile"
+
+        android:layout_above="@+id/laBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:background="@color/myWhite"
+        android:id="@+id/laBottomNav"
+        android:clipToPadding="false"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+
+        <LinearLayout
+            android:id="@+id/laProfile"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="@string/fawRegister"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Профиль"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/laProduct"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="@string/fawProducts"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Продукты"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/laInterest"
+
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <View
+                android:background="@color/myLightGray"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="@string/fawInterests"
+                style="@style/IconLWhite"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textColor="@color/myGray"
+                android:text="Интересы"
+                style="@style/TVxsReg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

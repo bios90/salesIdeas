@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:background="@drawable/rounded_white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_top_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center_horizontal"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_male"
+            app:civ_border_width="0dp"
+            app:civ_border_color="@color/myBlack" />
+
+        <TextView
+            android:id="@+id/tvName"
+
+            android:textColor="@color/myBlack"
+            android:minHeight="60dp"
+            android:text="Пушкин Александр Сергеевич"
+            style="@style/TVlgSemiBold"
+            android:layout_marginRight="24dp"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@id/laPhoneRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Телефон "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawPhone"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="+79167062291"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laMailRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Почта "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawMail"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvMail"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="bios90@mail.ru"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/laVKRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Вконтакте "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    android:fontFamily="@font/fawbrands"
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawVK"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvVkId"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="id337321"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laInstagramRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Instagram "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    android:fontFamily="@font/fawbrands"
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawInstagram"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvInstagram"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Peresvset"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/laCityRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Город "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawCity"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Москва"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laDistrictRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Район "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawDistrict"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvDistrict"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Пресня"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/laBdayRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Дата рождения "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawBirthday"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvBday"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="22 октября 1991"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laAgeRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Возраст "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawAge"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="19 лет"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laCategRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Категория "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawCategory"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvCateg"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Постоянный"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laFirstVisit"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Первый визит "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawFirstVisit"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvFirstVisit"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="22 июня 1997"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laLastVisitRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Последний визит "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawLastVisit"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvLastVisit"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="22 июня 1997"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laSaleRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:weightSum="100">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="Скидка "
+                    android:textColor="@color/myGray" />
+
+                <TextView
+                    style="@style/IconMWhite"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:text="@string/fawSale"
+                    android:textColor="@color/myPink" />
+
+                <TextView
+                    android:id="@+id/tvSale"
+
+                    style="@style/TVsmSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="26dp"
+                    android:layout_weight="50"
+                    android:text="5%"
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/laCommentRow"
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/TVsmReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Комментарий :"
+                    android:textColor="@color/myGray" />
+
+
+                <TextView
+                    android:id="@+id/tvComment"
+
+                    style="@style/TVsmReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/et_gray"
+                    android:gravity="left"
+                    android:lines="5"
+                    android:maxLines="6"
+                    android:minLines="4"
+                    android:padding="6dp"
+                    android:text=""
+                    android:textColor="@color/myBlack" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/laProductsRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/laOpenProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/btn_blue"
+
+                    android:clipToPadding="false"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvAllProducts"
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Приобретенные товары:" />
+
+
+                    <TextView
+                        android:id="@+id/iconEnter"
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@android:color/white" />
+
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expProducts"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexProducts"
+
+                        android:background="@drawable/rounded_bottom"
+                        android:paddingBottom="2dp"
+                        app:flexWrap="wrap"
+                        app:alignItems="stretch"
+                        app:alignContent="stretch"
+                        app:flexDirection="row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/laInterestsRow"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/laOpenInterests"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/btn_blue"
+
+                    android:clipToPadding="false"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvAllInterests"
+                        style="@style/TVsmSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="Интересы:" />
+
+
+                    <TextView
+                        style="@style/IconSWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:text="@string/fawArrowDown"
+                        android:textColor="@android:color/white" />
+
+
+                </RelativeLayout>
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expInterests"
+                    android:background="@drawable/rounded_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                   <com.google.android.flexbox.FlexboxLayout
+                       android:id="@+id/flexInterests"
+
+                       android:paddingBottom="2dp"
+                       app:flexWrap="wrap"
+                       app:alignItems="stretch"
+                       app:alignContent="stretch"
+                       app:flexDirection="row"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+
+                   </com.google.android.flexbox.FlexboxLayout>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/laEditClient"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/btn_pink"
+                android:clipToPadding="false">
+
+                <RelativeLayout
+                    android:id="@+id/laBtnAddClient"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/iconCross"
+                        style="@style/IconMWhite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="6dp"
+                        android:text="@string/fawEdit"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        style="@style/TVsmSemiBold"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_toRightOf="@+id/iconCross"
+                        android:text="Редактировать"
+                        android:textAllCaps="true" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
