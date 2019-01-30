@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ import dimfcompany.com.salesideas.Models.Model_Client;
 import dimfcompany.com.salesideas.R;
 import dimfcompany.com.salesideas.act_full_client_info;
 import dimfcompany.com.salesideas.act_main;
+import dimfcompany.com.salesideas.act_sort_dialog;
 
 public class frag_all_clients2 extends Fragment
 {
@@ -50,21 +52,25 @@ public class frag_all_clients2 extends Fragment
     GlobalHelper gh;
     View thisFragmentRootView;
     RecyclerView recAllClients;
-    Drawable drawMale,drawFemale;
     EditText etSearch;
     Compare_Helper compare_helper;
     AlertDialog spotsDialog;
+
+    TextView tvSort;
 
     List<Model_Client> allClients = new ArrayList<>();
     Adapter_AllClients adapter;
 
     private static final int CARD_CLICKED_INTENT = 9000;
+    private static final int SORT_CLICKED = 9100;
+
+    int currentSortInt = 999;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.frag_all_clients2,container,false);
+        return inflater.inflate(R.layout.frag_all_clients2, container, false);
     }
 
     @Override
@@ -82,17 +88,25 @@ public class frag_all_clients2 extends Fragment
     private void init()
     {
         actParent = (act_main) getActivity();
-        parentFragClients = ((frag_clients)frag_all_clients2.this.getParentFragment());
+        parentFragClients = ((frag_clients) frag_all_clients2.this.getParentFragment());
         gh = (GlobalHelper) actParent.getApplicationContext();
         compare_helper = new Compare_Helper(actParent);
         recAllClients = thisFragmentRootView.findViewById(R.id.recAllClients);
         recAllClients.setItemAnimator(new SlideRightAlphaAnimator());
 
-        drawMale = getResources().getDrawable(R.drawable.ic_user_male);
-        drawFemale = getResources().getDrawable(R.drawable.ic_user_female);
+        tvSort = thisFragmentRootView.findViewById(R.id.tvSort);
+        tvSort.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(actParent, act_sort_dialog.class);
+                intent.putExtra("selected",currentSortInt);
+                startActivityForResult(intent, SORT_CLICKED);
+            }
+        });
 
         etSearch = thisFragmentRootView.findViewById(R.id.etSearch);
-
         etSearch.addTextChangedListener(new TextWatcher()
         {
             @Override
@@ -105,7 +119,10 @@ public class frag_all_clients2 extends Fragment
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
                 String searchText = etSearch.getText().toString();
-                adapter.filter(searchText);
+                if(adapter != null)
+                {
+                    adapter.filter(searchText);
+                }
             }
 
             @Override
@@ -119,18 +136,17 @@ public class frag_all_clients2 extends Fragment
 
     private void loadAll()
     {
-        Log.e(TAG, "loadAll: Begin load All" );
+        Log.e(TAG, "loadAll: Begin load All");
         resetAll();
-        spotsDialog = gh.spotsDialogDialog(actParent,"Загрузка");
+        spotsDialog = gh.spotsDialogDialog(actParent, "Загрузка");
         spotsDialog.show();
-        int adminId = (int)gh.getAdminInfo().get(GlobalHelper.SQL_COL_ID);
         MySqlHelper mySqlHelper = new MySqlHelper(actParent);
-        mySqlHelper.loadAllClients(adminId, new IGetAllMyClients()
+        mySqlHelper.loadAllClients(new IGetAllMyClients()
         {
             @Override
             public void onSuccess(List<Model_Client> allClients)
             {
-                Log.e(TAG, "onSuccess: Succes from load All" );
+                Log.e(TAG, "onSuccess: Succes from load All");
                 frag_all_clients2.this.allClients = allClients;
                 setRecycler();
             }
@@ -138,8 +154,8 @@ public class frag_all_clients2 extends Fragment
             @Override
             public void onError(String strError)
             {
-                Log.e(TAG, "onError: Error from load all "+strError );
-                if(spotsDialog != null)
+                Log.e(TAG, "onError: Error from load all " + strError);
+                if (spotsDialog != null)
                 {
                     spotsDialog.dismiss();
                 }
@@ -149,24 +165,24 @@ public class frag_all_clients2 extends Fragment
 
     private void setRecycler()
     {
-        Log.e(TAG, "setRecycler: Begin set Recycler" );
-        if(allClients.size() == 0)
+        Log.e(TAG, "setRecycler: Begin set Recycler");
+        if (allClients.size() == 0)
         {
-            gh.showAlerter("Нет клиентов","Клиентов не найдено, добавьте во вкладке \"Новый\" или в меню \"Импорт\"",actParent);
-            if(spotsDialog != null)
+            gh.showAlerter("Нет клиентов", "Клиентов не найдено, добавьте во вкладке \"Новый\" или в меню \"Импорт\"", actParent);
+            if (spotsDialog != null)
             {
                 spotsDialog.dismiss();
             }
             return;
         }
-        
+
         adapter = new Adapter_AllClients(actParent, allClients, new IClientCardClicked()
         {
             @Override
             public void cardClicked(Model_Client client)
             {
                 gh.setCurrentClientToDisplay(client);
-                Intent intent = new Intent(actParent,act_full_client_info.class);
+                Intent intent = new Intent(actParent, act_full_client_info.class);
                 startActivityForResult(intent, CARD_CLICKED_INTENT);
             }
 
@@ -185,16 +201,53 @@ public class frag_all_clients2 extends Fragment
 
         recAllClients.setLayoutManager(new LinearLayoutManager(actParent));
         recAllClients.setAdapter(adapter);
-        if(spotsDialog != null)
+        if (spotsDialog != null)
         {
             spotsDialog.dismiss();
         }
-        
+
     }
-    
+
+    private void makeSort()
+    {
+        if (currentSortInt == 999)
+        {
+            Log.e(TAG, "makeSort: sorrt int is 999 will return");
+            return;
+        }
+
+        switch (currentSortInt)
+        {
+            case 0:
+                allClients = GlobalHelper.sortCliByName(allClients);
+                break;
+            case 1:
+                allClients = GlobalHelper.sortCliByCateg(allClients);
+                break;
+            case 2:
+                allClients = GlobalHelper.sortCliByPhone(allClients);
+                break;
+            case 3:
+                allClients = GlobalHelper.sortCliByEmail(allClients);
+                break;
+            case 4:
+                allClients = GlobalHelper.sortCliByCity(allClients);
+                break;
+            case 5:
+                allClients = GlobalHelper.sortCliByDate(allClients);
+                break;
+        }
+
+        recAllClients.removeAllViews();
+        recAllClients.setAdapter(null);
+        etSearch.setText("");
+        setRecycler();
+    }
+
+
     private void resetAll()
     {
-        Log.e(TAG, "resetAll: Begin Reset All" );
+        Log.e(TAG, "resetAll: Begin Reset All");
         allClients.clear();
         recAllClients.removeAllViews();
         recAllClients.setAdapter(null);
@@ -204,10 +257,39 @@ public class frag_all_clients2 extends Fragment
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == CARD_CLICKED_INTENT && resultCode == Activity.RESULT_OK)
+        if (requestCode == CARD_CLICKED_INTENT && resultCode == Activity.RESULT_OK)
         {
-            Log.e(TAG, "onActivityResult: Result Code Ok!!!" );
+            Log.e(TAG, "onActivityResult: Result Code Ok!!!");
             loadAll();
         }
+
+        if (requestCode == SORT_CLICKED && resultCode == Activity.RESULT_OK)
+        {
+            int selected = data.getIntExtra("selected", 999);
+            if(selected == currentSortInt)
+            {
+                Log.e(TAG, "onActivityResul ints are equal will retirn");
+                return;
+            }
+            Log.e(TAG, "onActivityResult: Sort int is " + currentSortInt);
+            currentSortInt = selected;
+            makeSort();
+        }
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+
+        RelativeLayout laNoInternet = thisFragmentRootView.findViewById(R.id.laNoInternet);
+        if(gh.isNetworkAvailable(actParent))
+        {
+            laNoInternet.setVisibility(View.GONE);
+        }else
+            {
+                laNoInternet.setVisibility(View.VISIBLE);
+            }
+
     }
 }
